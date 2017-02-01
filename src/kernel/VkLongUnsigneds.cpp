@@ -1,4 +1,5 @@
 /*****  Long Unsigneds Implementation  *****/
+#define V_VLongUnsigneds
 
 /************************
  ************************
@@ -6,8 +7,17 @@
  ************************
  ************************/
 
+/********************
+ *****  System  *****
+ ********************/
+
 #include "Vk.h"
 
+/******************
+ *****  Self  *****
+ ******************/
+
+#define   VkLongUnsigneds
 #include "VkLongUnsigneds.h"
 
 /***********************
@@ -16,14 +26,6 @@
  ***********************
  ***********************/
 
-PublicVarDef unsigned int VkLongUnsigneds_DummyElement = 0;
-
-/*************************************
- *************************************
- *****  Template Instantiations  *****
- *************************************
- *************************************/
-
-template class VkUnsignedTemplate<(unsigned int)2>;
-template class VkUnsignedTemplate<(unsigned int)3>;
-template class VkUnsignedTemplate<(unsigned int)4>;
+namespace V {
+  VLongUnsignedBase::grain_t VLongUnsignedBase::m_iDummy = 0;
+}

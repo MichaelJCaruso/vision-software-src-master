@@ -240,7 +240,9 @@ src/VAccess/VAccess_p.c
 src/VAccess/dlldata.c
 src/VAccess_Sample/obj/
 src/vsaprompt/vsaprompt
+src/vsaprompt/vsaprompt-dbg
 src/vserver/vserver
+src/vserver/vserver-dbg
 
 # Visual Studio Build Artifacts
 src/vision.sdf

@@ -61,9 +61,9 @@ VTransientServicesForBatchvision::VTransientServicesForBatchvision ()
 {
 #if defined (__linux__) || defined (sun)
 
+    // Unless directed otherwise, ...
     // Don't allow unlimited datasize. If unlimited, fall back to 2 GB ..
     // Any finite limit is acceptable.
-
     struct rlimit datasize;
     if (-1 == getrlimit (RLIMIT_DATA, &datasize) ||  RLIM_INFINITY == datasize.rlim_cur){
 	m_sMemoryAllocationLimit = getenv ("VisionDataLimitDisabled") ? 0xffffffff00000000ull :  0x80000000;
